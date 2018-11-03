@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using MedatrApp.External;
 
 namespace MedatrApp.Cqrs
 {
     public class PingHandler : RequestHandler<Ping, string>
     {
-        private External.IPing _ping;
+        private IPing _ping;
 
-        public PingHandler(External.IPing ping)
+        public PingHandler(IPing ping)
         {
             _ping = ping;
         }
