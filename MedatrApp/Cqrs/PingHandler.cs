@@ -6,11 +6,18 @@ using MediatR;
 
 namespace MedatrApp.Cqrs
 {
-    public class SyncHandler : RequestHandler<Ping, string>
+    public class PingHandler : RequestHandler<Ping, string>
     {
+        private External.IPing _ping;
+
+        public PingHandler(External.IPing ping)
+        {
+            _ping = ping;
+        }
+
         protected override string Handle(Ping request)
         {
-            return request.Host + " is Ponging";
+            return _ping.Ping(request.Host);
         }
     }
 }
