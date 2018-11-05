@@ -17,7 +17,7 @@ namespace MedatrApp.Controllers
             _mediator = mediator;
         }
 
-        // GET api/values/5
+        // GET api/ping/foo
         [HttpGet("{host}")]
         public async Task<ActionResult<string>> GetAsync(String host)
         {
