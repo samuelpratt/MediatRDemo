@@ -12,8 +12,8 @@ See <https://github.com/jbogard/MediatR/wiki> for details of how to use MediatR.
 
 ### Pre-requisits
 
-* Install docker
-* Install the .NET CORE 2.1 SDK
+* Install docker <https://www.docker.com/products/docker-desktop>
+* Install the .NET Core 2.1 SDK <https://www.microsoft.com/net/download>
 
 ### Running the code
 
